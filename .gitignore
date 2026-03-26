@@ -1,0 +1,50 @@
+# Node modules
+
+node_modules/
+
+# Logs
+
+logs
+*.log
+npm-debug.log*
+
+# Environment variables
+
+.env
+
+# Build folders
+
+/build
+/dist
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# IDE files
+
+.vscode/
+.idea/
+
+# MongoDB local files
+
+/data/db/
+
+# Coverage
+
+/coverage
+
+# Temporary files
+
+*.tmp
+*.temp
+
+# Frontend specific
+
+frontend/node_modules/
+frontend/build/
+
+# Backend specific
+
+backend/node_modules/

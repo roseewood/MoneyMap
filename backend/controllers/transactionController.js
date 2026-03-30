@@ -10,6 +10,25 @@ exports.getTransactions = async (req, res) => {
   }
 };
 
+//Filter
+exports.getTransactions = async (req, res) => {
+  const { category, startDate, endDate } = req.query;
+
+  let filter = {};
+
+  if (category) filter.category = category;
+
+  if (startDate && endDate) {
+    filter.date = {
+      $gte: new Date(startDate),
+      $lte: new Date(endDate),
+    };
+  }
+
+  const transactions = await Transaction.find(filter);
+  res.json(transactions);
+};
+
 // Add transaction
 exports.addTransaction = async (req, res) => {
   try {

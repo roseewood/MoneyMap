@@ -3,7 +3,7 @@ import { getTransactions } from "../services/api";
 import AddTransaction from "./AddTransaction";
 import TransactionList from "./TransactionList";
 import Chart from "./Chart";
-<Chart transactions={transactions} />
+
 
 const Dashboard = () => {
   const [transactions, setTransactions] = useState([]);
